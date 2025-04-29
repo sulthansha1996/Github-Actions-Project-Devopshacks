@@ -121,7 +121,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: sulthan/bankapp:latest
+        tags: sulthan_sha:latest
         file: ./Dockerfile
 
   deploy_to_local_docker:
@@ -132,7 +132,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Pull Docker Image
-      run: docker pull suthan/bankapp:latest
+      run: docker pull suthan_sha:latest
 
     - name: Stop and Remove Existing Container
       run: |
@@ -141,4 +141,4 @@ jobs:
 
     - name: Run Docker Container
       run: |
-        docker run -d --name bankapp-container -p 8080:8080 suthan/bankapp:latest
+        docker run -d --name bankapp-container -p 8080:8080 suthan_sha:latest
