@@ -141,4 +141,4 @@ jobs:
 
     - name: Run Docker Container
       run: |
-        docker run -d --name bankapp-container -p 8080:8080 sulthansha/suthan_sha:latest
+        docker run -d --name bankapp-container -p 8080:8080 sulthansha/sulthan_sha:latest
